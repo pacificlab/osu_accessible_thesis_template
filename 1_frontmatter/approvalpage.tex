@@ -1,0 +1,56 @@
+%!TEX encoding = UTF-8 Unicode
+%!TEX root = ../thesis.tex
+\typeout{ACCESS - APPROVALPAGE \thepage}
+%\cleardoublepage
+%\addcontentsline{toc}{section}{Preface}
+%\vspace*{1mm}
+
+%\thispagestyle{empty}
+%\newlength\longest
+%\null\vfill
+
+  \thispagestyle{empty}
+\begin{singlespacing}
+	\begin{flushleft}
+		\makeatletter
+		\noindent
+		\ulinewithbreaks{\@degree} \MakeLowercase{\@doctype} of \ulinewithbreaks{\@author} 
+		presented on \uline{\@submitdate}. \\
+		\vspace{3em}
+		APPROVED:\\
+		\vspace{3em}
+		\hrulefill \\
+		% Major Professor (Co- if there is a coadvisor}
+	\if\@coadvisor *
+	\else Co-\fi Major Professor, representing \@major \\
+	\vspace{3em}
+	% Second major professor if exists
+	\if\@coadvisor *
+	\else\hrulefill \\  Co-Major Professor, representing \@twomajor \\
+	\vspace{3em}
+	\fi
+	\hrulefill \\ 
+	% major department head
+	\@depthead\ of the \@depttype\ of \@department \\
+	\vspace{3em}
+	\if\@twodepartment * 
+	\else
+	% Here is the second Department
+	\hrulefill \\ 
+	\@twodepthead\ of the \@twodepttype\ of \@twodepartment \\
+	\vspace{3em}
+	\fi
+	\hrulefill \\
+	Dean of the Graduate School \\
+	\vfill
+	I understand that my \MakeLowercase{\@doctype} will become part of the
+	permanent collection of Oregon State University libraries. My signature
+	below authorizes release of my \MakeLowercase{\@doctype} to any reader
+	upon request.
+	\vspace{3em} \\
+	\hrulefill \\
+	\makebox[\textwidth]{\hfill \@author, Author \hfill}
+	\makeatother
+\end{flushleft}
+\end{singlespacing}
+\newpage

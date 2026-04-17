@@ -1,0 +1,59 @@
+%!TEX encoding = UTF-8 Unicode
+%!TEX root = ../thesis.tex
+
+
+\typeout{ACCESS - TESTTABLE \thepage}
+
+\chapter{Test of a Table}\label{ch:testtable}
+
+
+\begin{table}[ht]
+    \begin{centering}
+    \begin{tabular}{c c l}
+    
+    %\hline
+   
+    \bf
+    Time&\qquad \bf Length (cm)\qquad & \bf comment\\
+    \hline
+    \rm
+    August 3, 12:00& 29&asleep\\
+    August 4, 08:00& 25 &won't stay still\\
+    August 5, 16:00& 32 &stretching\\
+    August 5, 02:00& 30 &asleep\\
+    %\hline
+    \end{tabular}
+    
+    \caption[Kitten length measurements]{Measurements of the length of Floyd the kitten from August 3 to August 5, 2023.}
+    \label{tab:kitten}
+    \end{centering}
+\end{table}
+
+Another table (December 1, 2025)
+
+
+\begin{table}[ht]
+\begin{tabular}{lrrrr}
+Model &	 $\chisquared$ - linear &	 $\chisquared$ - log  \\ 
+\hline%
+{\bf GENIE 2.12.6 Tunes} \\
+MINERvA Tune v1 &	      362.6 &	      580.4 	 \\%CV)\\
+MINERvA Tune v2 &	      364.4 &	      601.4 	 \\%CV2)\\
+GENIE  w/o 2p2h &	      226.5 &	      473.2 	 \\%Default)\\
+GENIE (Default) &	      346.4 &	      550.6 	 \\%NA)\\
+GENIE+$\pi$tune &	      354.3 &	      568.5 	 \\%piontune)\\
+GENIE+RPA &	      230.0 &	      406.7 	 \\%rpa)\\
+GENIE+RPA+$\pi$tune &	      231.7 &	      414.6 	 \\%rpapiontune)\\
+GENIE+Low Recoil Tune &	      755.4 &	     1059.4 	 \\%2p2h)\\
+GENIE+Low Recoil Tune+RPA &	      361.2 &	      570.0 	 \\%2p2hrpa)\\
+GENIE+Low Recoil Tune+$\pi$tune &	      760.6 &	     1081.8 	 \\%2p2hpiontune)\\
+\\
+{\bf GENIE 3.0.6 Tunes} \\
+GENIE 3.0.6 G18\_02a\_02\_11a &	      602.9 &	      865.0 	 \\%(G18_02a_02_11a)
+GENIE 3.0.6 G18\_02b\_02\_11a &	      586.9 &	      878.3 	 \\%(G18_02b_02_11a)
+GENIE 3.0.6 G18\_10a\_02\_11a &	      353.1 &	      447.5 	 \\%(G18_10a_02_11a)
+GENIE 3.0.6 G18\_10b\_02\_11a &      312.8 &     421.7   \\%(G18_10b_02_11a)
+\end{tabular}
+
+\caption{$\pperp - \pperp$ $\chisquared$  between data and model variants derived from GENIE. The number of degrees of freedom is 171. Both the $\chisquared$ between the values and between the logs of the values are listed.} \label{tab:pzptchi2}
+\end{table}

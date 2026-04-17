@@ -1,0 +1,26 @@
+%!TEX encoding = UTF-8 Unicode
+%!TEX root = thesis.tex
+
+% for annotations
+\newcommand*\numcircledtikz[1]{\tikz[baseline=(char.base)]{
+		\node[shape=circle,draw,inner sep=1.2pt] (char) {#1};}} 
+
+% properly scaled \texttt command
+\let\oldtexttt\texttt% Store \texttt
+\renewcommand{\texttt}[1]{{\small \ttfamily #1}}
+
+
+\DefineVerbatimEnvironment{coding}{Verbatim}{numbers=left,fontsize=\small}
+
+
+% verbatim environment with SourceCodePro
+\makeatletter 
+%  \def\verbatim@font{\fontfamily{SourceSansPro-TOsF}\footnotesize% select the font 
+\def\verbatim@font{\fontfamily{SourceCodePro-TOsF}\footnotesize% select the font 
+\let\do\do@noligs 
+\verbatim@nolig@list} 
+\makeatother
+
+% for commands, filenames, etc. within text
+\DefineVerbatimEnvironment{VerbOutPlainSource}{Verbatim}{fontfamily=SourceCodePro-TOsF,fontsize=\small}
+\def\code#1{{\fontfamily{SourceCodePro-TOsF}\selectfont\small #1}}

@@ -1,0 +1,188 @@
+
+\input{preamble}
+\input{mybeavtex}
+
+%\pdfinterwordspaceon
+
+\title{A Very Long Example Title: For the Purpose of Demonstrating that Underlining Works Despite an Excessively Long Title}
+
+\author{Benny Beaver}
+\degree{Master of Science}
+\doctype{Thesis}
+\department{Electrical Engineering and Computer Science}
+\depttype{School}
+\depthead{Director}
+\major{Electrical and Computer Engineering}
+\advisor{Vincent Immler}
+\submitdate{Oct 22, 2025}
+\commencementyear{2025}
+
+\abstract{
+Here you put the text for your abstract (motivation, problem statement, approach, results, conclusion, impact).
+This template \emph{requires} LuaLaTeX 2025-11-01 (or simply TeXLive 2026).
+It is designed to pass digital accessibility checks but you will still be required to check the result to confirm.
+The base class of this template is `book' which supports hierarchical structures based on: parts, chapters, sections, subsections, subsubsection and paragraph.
+You may want to use parts only for a dissertation with additional minitoc \href{https://mediatum.ub.tum.de/doc/1482457/document.pdf}{as demonstrated in my dissertation}.
+For references, please use biblatex with biber as backend (not the outdated bibtex).
+\textbf{Please also note: this is currently set to use Libertine (Libertinus) font with the intention to use Source Code Pro for verbatim environments (as a quick workaround for the lack of lstlisting).}
+\textcolor{oregonstateorange}{Go Beavs!}
+}
+
+\acknowledgements{Creating this thesis template has been a collaborative effort by multiple people affiliated with Oregon State University: Heidi Schellmann, David A Craig, Ross Hatton, and Vincent Immler.}
+
+\ifoldbib
+   % VI: I do not recommend using bibtex anymore; only biblatex with biber; consider this a legacy option
+\else
+    \addbibresource{thesisbib.bib}
+    % adding multiple .bib files is possible
+    %\addbibresource{youradvisorsfavorite.bib}
+    %\addbibresource{yourfriendsfavorite.bib}
+\fi
+
+\makeatletter
+\AtBeginDocument{
+	\hypersetup{
+		pdftitle = {\@title},
+		pdfauthor = {\@author},
+		pdfsubject={\@title},
+		pdfkeywords={Oregon State University}
+	}
+}
+\makeatother
+
+\usepackage{hyperref}
+
+\hypersetup{
+pdflang={en-US},
+pdfdisplaydoctitle=true,
+	unicode=true,
+	colorlinks=true,
+	linkcolor=thedarkblue,
+	citecolor=thegreen,
+	filecolor=black,
+	urlcolor=thedarkblue,
+	%	backref=section,
+	%bookmarksopen=true,
+	%bookmarksopenlevel=3,
+	%bookmarksdepth=subsection,
+	hypertexnames=false,
+	linktocpage=true,
+	plainpages=false,
+	breaklinks
+}
+
+\ifpdf
+	\hypersetup{linktocpage=false} % false=links are section names, true=links are page numbers
+\else
+	\hypersetup{linktocpage=true} % false=links are section names, true=links are page numbers
+	\usepackage[hyphenbreaks]{breakurl}
+\fi
+
+% used for acro package
+%\usepackage[macros=true, xspace=true]{acro}
+%\input{myacronyms}
+
+%\usepackage{subcaption}
+%\captionsetup{compatibility=false}
+
+\usepackage{fancyvrb}
+\usepackage{tcolorbox}
+
+\input{mycommands}
+\input{mymacros}
+
+% make certain tagpdf knows about the table format
+\ifaccess
+\tagpdfsetup{table/header-rows={1}}
+\fi
+
+\begin{document}
+\frontmatter
+\pagestyle{empty}
+
+%\flyleaf
+
+\input{1_frontmatter/abstract}
+\input{1_frontmatter/copyrightpage}
+\input{1_frontmatter/titlepage}
+\input{1_frontmatter/approvalpage}  %HMS replace uline with underline - problem for long titles. 
+\input{1_frontmatter/acknowledgements}
+
+
+%\addtocontents{toc}{\protect\markboth{\contheading}{\contheading}}
+%\microtypesetup{protrusion=false}
+%\addcontentsline{toc}{chapter}{Table of Contents} % currently messes up minitoc
+%\renewcommand{\contentsname}{\hspace*{\fill}\bfseries\Large Contents\hspace*{\fill}} % center "Contents"
+%\addcontentsline{toc}{section}{Table of Contents} % bookmark does not work properly, page number is correct though
+%https://tex.stackexchange.com/questions/363998/remove-or-change-the-zero-before-table-of-contents
+\typeout{ACCESS - TABLE OF CONTENTS \thepage}
+\tableofcontents
+%\microtypesetup{protrusion=true}
+
+%% generate list of figures
+\newpage
+%\addcontentsline{toc}{chapter}{List of Figures}
+\typeout{ACCESS - LIST OF FIGURES \thepage}
+\listoffigures
+\newpage
+
+%% generate list of tables
+\newpage
+%\addcontentsline{toc}{chapter}{List of Tables}
+\typeout{ACCESS - LIST OF TABLES \thepage}
+\listoftables
+\newpage
+
+% %% generate list of algorithms
+% \newpage
+% %\addcontentsline{toc}{chapter}{List of Algorithms}
+% \listofalgorithms
+% \listofalgorithmes % for algo2e: not a typo, algo2e option redefines \listofalgorithms into \listofalgorithmes
+% \clearpage
+
+% %% generate list of code listings
+% \newpage
+% \lstlistoflistings
+% \clearpage
+
+\typeout{ACCESS - BEFORE MAIN MATTER}
+\mainmatter
+\part{Introduction}
+
+\input{2_mainmatter/introduction}
+\input{2_mainmatter/background}
+\input{2_mainmatter/implementation}
+\input{2_mainmatter/measurement}
+\input{2_mainmatter/results}
+\input{2_mainmatter/conclusion}
+
+\part{Accessibility Tests}
+\input{2_mainmatter/testrequirements}
+\input{2_mainmatter/testlisting}
+\input{2_mainmatter/testmath}
+\input{2_mainmatter/testtable}
+\iftikz
+%\input{2_mainmatter/testtikz}
+\fi
+%\input{2_mainmatter/conclusion}
+
+\backmatter
+% % Bibliography
+
+\addcontentsline{toc}{chapter}{Bibliography}
+%  HMS 2025-10-17 
+\ifoldbib
+    \bibliographystyle{ieeetr}% this style puts paper titles in quotes which is nice. 
+    \bibliography{accessibility}
+\else
+    \renewcommand*{\UrlFont}{\scriptsize\ttfamily}
+    \printbibliography
+\fi
+
+\appendix % Only use the \appendix macro once for all appendices.
+
+\input{3_backmatter/testappendixtable}
+
+% % Glossary / Index
+
+\end{document}

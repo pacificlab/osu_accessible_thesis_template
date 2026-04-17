@@ -1,0 +1,85 @@
+%!TEX encoding = UTF-8 Unicode
+%!TEX root = ../thesis.tex
+\typeout{ACCESS - TEST LISTING \thepage}
+
+\chapter{Test Code Listings} \label{chap:codelistings}
+
+\section{Example: Verbatim Listing} \label{sec:verbatimlistings}
+
+For now, the \LaTeX\/ package \texttt{listing} is not compatible with tagging which is why we will use the plain verbatim environment.
+The first code snippet is just using a plain verbatim environment:
+
+\begin{verbatim}
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+\end{verbatim}
+
+The second code snippet is using a custom verbatim environment with the Adobe Source Code Pro font and line numbers:
+
+\begin{coding}
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+\end{coding}
+
+
+
+\section{Example: Verbatim combined with tcolorbox Listing} \label{sec:tcolorboxlistings}
+
+Additionally requires the package \texttt{tcolorbox}.
+
+\begin{tcolorbox}[colback=gray!25, boxsep=0pt, arc=0pt, boxrule=0pt]
+\begin{coding}
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+\end{coding}
+\end{tcolorbox}
+
+\section{Example: Code Listing with Listings}
+
+(underlying package not compatible yet)
+
+% \begin{lstlisting}[language=C, caption={Firmware for instruction skipping.}, label=lst:stmdut]
+%     uint32_t glitched = 0x01u;
+%     sigTermInit();
+%     sigEnabOne();
+
+%     while (glitched) //THIS INSTRUCTION CAN BE GLITCHED
+%     {
+%     ;
+%     }
+%     // Increment instruction skip counter
+%     glitched++;
+%     glitched++;
+%     asm("NOP");
+%     asm("NOP");
+%     asm("NOP");
+%     asm("NOP");
+%     asm("NOP");
+%     asm("NOP");
+
+%     while (glitched)
+%     {
+%         if (glitched == 0x01u) {
+%             sigTermOne();
+%             sigEnabTwo();
+%         } else if (glitched == 0x02u) {
+%             sigTermOne();
+%             sigTermTwo();
+%         } else if (glitched == 0x03u) {
+%             sigEnabOne();
+%             sigEnabTwo();
+%         }
+%     }
+% \end{lstlisting}

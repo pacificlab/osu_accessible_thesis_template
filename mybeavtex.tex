@@ -1,0 +1,66 @@
+%!TEX encoding = UTF-8 Unicode
+%!TEX root = thesis.tex
+
+\definelisting{toc}{TABLE OF CONTENTS}{}{tableofcontents}
+\definelisting{lof}{LIST OF FIGURES}{Figure}{listoffigures}
+\definelisting{lot}{LIST OF TABLES}{Table}{listoftables}
+\definelisting{loa}{LIST OF ALGORITHMS}{Algorithm}{listofalgorithmes}
+\definelisting{lol}{LIST OF CODE LISTINGS}{Code}{lstlistoflistings}
+\definelisting{loap}{LIST OF APPENDICES}{}{listofappendices}
+\definelisting{loaf}{LIST OF APPENDIX FIGURES}{Figure}{listofappendixfigures}
+\definelisting{loat}{LIST OF APPENDIX TABLES}{Table}{listofappendixtables}
+
+\usepackage[svgnames]{xcolor}
+\definecolor{oregonstateorange}{RGB}{215,63,9}
+\definecolor{thedarkblue}{rgb}{0.0,0.0,0.3} 
+\definecolor{theblue} {rgb}{0.02,0.04,0.48}
+\definecolor{thered}  {rgb}{0.65,0.04,0.07}
+\definecolor{thegreen}{rgb}{0.06,0.44,0.08}
+\definecolor{thelightgreen}{rgb}{0.06,0.44,0.06}
+\definecolor{thegrey} {gray}{0.5}
+\definecolor{thegray} {gray}{0.5}
+\definecolor{thedarkgray} {gray}{0.95}
+\definecolor{theshade}{gray}{0.94}
+\definecolor{theframe}{gray}{0.75}
+\definecolor{thecream}{rgb}{1,0.95,0.4}
+\definecolor{spot}{rgb}{0,0.2,0.6}
+\definecolor{boxframe}{gray}{0.8}
+\definecolor{boxfill}{rgb}{0.95,0.95,0.99}
+\definecolor{theoption}{rgb}{0.118,0.546,0.222}
+\definecolor{themacro}{rgb}{0.784,0.06,0.176}
+\definecolor{ExampleFrame}{rgb}{0.628,0.705,0.942}
+\definecolor{ExampleBack}{rgb}{0.963,0.971,0.994}
+\definecolor{Hyperlink}{rgb}{0.281,0.275,0.485}
+
+
+\usepackage{tikz}
+\usetikzlibrary{matrix, positioning}
+\usetikzlibrary{calc}
+
+\typeout{ACCESS: USING MYBEAVTEX}
+% HMS 2025-10-17 remove biblatex?
+\ifoldbib
+    %\usepackage[nottoc,numbib]{tocbibind} beavtex did not use this
+    \typeout{ACCESS: USING OLD BIB STYLE}
+\else
+    \typeout{ACCESS: USING NEW BIB STYLE}
+    \usepackage[maxbibnames=99, sorting=none, backend=biber, style=numeric]{biblatex} % load the package
+    % HMS change to sorting=none
+    %\ExecuteBibliographyOptions{doi=false, eprint=false} % only works with numeric style
+    \ExecuteBibliographyOptions{doi=true, eprint=true} % HMS turn these on
+    % have biblatex showing [?] instead of the stupid bibtex key
+    \makeatletter
+    \def\blx@citeadd#1{%
+    	\ifcsdef{blx@keyalias@\the\c@refsection @#1}
+    	{\edef\blx@realkey{\csuse{blx@keyalias@\the\c@refsection @#1}}}
+    	{\def\blx@realkey{#1}}%
+    	\expandafter\blx@getrefcontext\expandafter{\blx@realkey}% needed for \ifdata
+    	\expandafter\blx@citation\expandafter{\blx@realkey}\blx@msg@cundefon
+    	\expandafter\blx@ifdata\expandafter{\blx@realkey}
+    	{\advance\blx@tempcnta\@ne
+    		\listeadd\blx@tempa{\blx@realkey}}
+    	{\ifnum\blx@tempcntb>\z@\multicitedelim\fi
+    		\expandafter\abx@missing\expandafter{?}%<- the change is here
+    		\advance\blx@tempcntb\@ne}}
+    \makeatother
+\fi

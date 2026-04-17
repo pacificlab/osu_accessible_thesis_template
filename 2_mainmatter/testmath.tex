@@ -1,0 +1,71 @@
+%!TEX encoding = UTF-8 Unicode
+%!TEX root = ../thesis.tex
+
+\typeout{ACCESS - TESTMATH \thepage}
+\chapter{Gnarly Math}\label{ch:testmath}
+
+\section{Example by Ulrike Fischer}\label{sec:test_math_example}
+This example was shown in reference \cite{ctan:tagpdftalk}.
+\begin{align}
+f(x) &= |{x}| +
+\begin{cases}
+1 & \text{if $x<0$} \\
+0 & \text{if $x=0$} \\
+-1 & \text{if $x>0$}
+\end{cases}\label{A} \\
+%
+f(x) &> -1 \quad \text{see \eqref{A}}
+\end{align}
+
+\section{Checking Macros}
+
+I type this a lot $\QsquaredsubQE$.
+
+\section{More Math}
+
+\newcommand{\melt}[3]{\ensuremath{\langle {#1} | {#2} | {#3} \rangle}}
+
+The  Hadamard propagator can then be written as 
+\begin{equation} \label{eq:vertexexp}
+G^\pm_{\mathrm{H}}(\nu_f,\phi_f;\nu_i,\phi_i) =
+\sum_{M=0}^{\infty} \sum_{ \substack{\nu_{M-1},\ldots,\nu_1\\ \nu_m\neq \nu_{m+1}}}
+A^{\pm}_M(\nu_{M},\nu_{M-1},\ldots,\nu_{1},\nu_{0};\Delta\phi) ,
+\end{equation} 
+(Same equation using eqnarray and subequations:
+\begin{subequations}
+\begin{eqnarray}
+G^\pm_{\mathrm{H}}(\nu_f,\phi_f;\nu_i,\phi_i) 
+% % #1\atop #2
+%  & = &
+% \sum_{M=0}^{\infty} \sum_{{\nu_{M-1},\ldots,\nu_1}\atop{\nu_m\neq \nu_{m+1}}}
+% A^{\pm}_M(\nu_{M},\nu_{M-1},\ldots,\nu_{1},\nu_{0};\Delta\phi)   \\
+%  & = &
+% % \substack{#1\\ #2} produces larger output that atop
+% \sum_{M=0}^{\infty} \sum_{\substack{\nu_{M-1},\ldots,\nu_1\\ \nu_m\neq \nu_{m+1} }}
+% A^{\pm}_M(\nu_{M},\nu_{M-1},\ldots,\nu_{1},\nu_{0};\Delta\phi)   \\
+ & = &
+% \genfrac{}{}{0pt}{}{#1}{#2} produces output simialr to atop
+\sum_{M=0}^{\infty} \sum_{\genfrac{}{}{0pt}{}{\nu_{M-1},\ldots,\nu_1}{\nu_m\neq \nu_{m+1} }}
+A^{\pm}_M(\nu_{M},\nu_{M-1},\ldots,\nu_{1},\nu_{0};\Delta\phi)   \\
+ & = &
+\sum_{M=0}^{\infty} \sum_{{\nu_{M-1},\ldots,\nu_1}}
+P^{\pm}_M(\nu_{M},\nu_{M-1},\ldots,\nu_{1},\nu_{0};\Delta\phi)
+\end{eqnarray}
+\end{subequations}
+where the ``path amplitude'' $A^{\pm}_M$ associated with the path
+$(\nu_{M},\nu_{M-1},\ldots,\nu_{1},\nu_{0})$ is given in terms of the matrix 
+elements $\Theta_{\nu\nu'}=\melt{\nu}{\Theta}{\nu}$ by %
+% \footnote{There is a similar alternative expansion for $G^\pm_{\mathrm{NW}}$
+% in terms of the matrix elements of $H=\sqrt{\Theta}$.
+% } %
+\begin{multline}
+A^{\pm}_M(\nu_{M},\nu_{M-1},\ldots,\nu_{1},\nu_{0};\Delta\phi)  =
+\Theta_{\nu_M\nu_{M-1}}\ldots\Theta_{\nu_2\nu_1}\Theta_{\nu_1 \nu_0}  \\
+\times\prod_{k=0}^{p-1}\frac{1}{(d_k-1)!} \left(\frac{\partial}{\partial \Theta_{w_k w_k}}\right)^{d_k-1}
+\sum_{l=0}^{p-1} \frac{e^{\pm i\sqrt{\Theta_{w_l w_l}}\Delta\phi}}{2\sqrt{\Theta_{w_l w_l}}
+%      \prod_{ {j=0}\atop{j\neq l}}^{p-1} (\Theta_{w_l w_l}-\Theta_{w_j w_j})}.
+       \prod_{ \substack{j=0\\ j\neq l}}^{p-1} (\Theta_{w_l w_l}-\Theta_{w_j w_j})}.
+%      \prod_{ \genfrac{}{}{0pt}{}{j=0}{j\neq l}}^{p-1} (\Theta_{w_l w_l}-\Theta_{w_j w_j})}.
+\end{multline}
+(I have worse if we need them.)
+

@@ -1,0 +1,118 @@
+%!TEX encoding = UTF-8 Unicode
+%!TEX root = thesis.tex
+
+ \newif\ifaccess  % test accessibility
+ \newif\ifuatwo   % go for UA-2
+ \newif\ifoldbib  % use plain old bibliography
+ \newif\iftikz
+ 
+ \accesstrue
+ \uatwofalse
+ \oldbibfalse
+ \tikztrue
+
+\ifaccess
+    \ifuatwo
+        \typeout{USING PDF 2.0/ua-2}
+        \DocumentMetadata{
+            uncompress,
+            lang=en-US,
+            pdfversion=2.0,
+            pdfstandard=a-4f,
+            pdfstandard=ua-2,
+            tagging=on,
+            tagging-setup={math/setup={mathml-SE,mathml-AF}}
+            }
+          \else
+          \typeout{USING PDF 1.7}
+          \DocumentMetadata{
+            uncompress,
+            lang=en-US,
+            pdfversion=1.7,
+            %pdfstandard=a-4f,
+            pdfstandard=ua-1,
+            tagging=on,
+            }
+          \fi
+    \else
+    \typeout{NOT USING TAGPDF}
+\fi
+
+
+%\RequirePackage{fix-cm} % overrides the (original) LaTeX restrictions on the sizes at which CM and EC fonts may be used
+\RequirePackage{cmap} % make PDF files searchable and copyable.
+\RequirePackage{mmap} % include CMap resources in PDF files from PDFTeX. cmap + mathematics (ASCII)
+
+
+\listfiles
+
+\documentclass[onehalf,11pt]{beavtex}
+%\documentclass[onehalf,11pt]{book}
+
+% [pdflatex]
+% \usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
+
+\usepackage{fontspec}
+\setmainfont{Libertinus Serif}
+\setmonofont{Source Code Pro}[Scale=MatchLowercase] 
+
+\usepackage{graphicx}
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchUppercase]{libertinusmath-regular.otf}
+
+\usepackage[final,babel]{microtype}
+
+% [pdflatex]
+% %\usepackage[default,osf]{sourcesanspro}
+% %\usepackage[scaled=.95]{sourcecodepro}
+% \usepackage{sourcecodepro}
+% \usepackage{libertine}
+% \renewcommand*\oldstylenums[1]{{\fontfamily{fxlj}\selectfont #1}}
+
+
+% % General stuff (continued)
+% \usepackage{ifpdf}
+% \usepackage[normalem]{ulem}
+% %\usepackage[l2tabu, orthodox]{nag} % check code for old/deprecated things (see: l2tabu.pdf)
+% \usepackage{paralist} % improve itemize
+% \usepackage{enumitem}
+% \usepackage{ellipsis} %fix \dots
+
+% \usepackage{xspace} 
+
+% % Figures
+% \usepackage{graphicx}
+% %\usepackage{subfig}
+% \usepackage{placeins}
+% \usepackage[RGB,table]{xcolor} % use option xcdraw ?
+
+% % Tables
+% \usepackage{longtable}
+% \usepackage{booktabs}
+% \usepackage{multirow}
+
+% % Math stuff and units
+% \usepackage{textcomp,marvosym}
+\usepackage{latexsym, amsfonts}  %HMS reenable
+%\usepackage[intlimits]{amsmath}
+
+%\usepackage{fixmath, upgreek} %provide ISO 80000 conforming greek letters
+%\usepackage{fixmath} %upgreek is only listed as partially compatible
+
+%\usepackage[all,warning]{onlyamsmath} %warns if non-amsmath-environments are used, like $$ ... $$ or eqnarray ... acro.sty must be loaded before this package, otherwise strange error happens!
+
+% \usepackage{framed}
+% \usepackage[amsmath,thmmarks,framed]{ntheorem}
+
+% % Acronyms
+% %\usepackage{acro}
+% %\usepackage[printonlyused]{acronym}
+
+\usepackage{pdflscape}
+
+% \usepackage{adjustbox} % not compatible yet
+% \usepackage{afterpage} % not compatible yet
+
+\def\preambleloaded{Precompiled preamble loaded. Ready to go!}
+\usepackage{fixmath, upgreek} %provide iso conform greek letters

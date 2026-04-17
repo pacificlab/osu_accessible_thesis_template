@@ -1,0 +1,124 @@
+@Electronic{OG13,
+    author       = {{Sourceforge}},
+    title        = {{GIAnT (Generic Implementation ANalysis Toolkit)}},
+    year         = {2013},
+    url          = {https://sf.net/projects/giant/},
+    month        = {04},
+    howpublished = {Website},
+}
+
+@online{REa,
+	author = {Renesas Electronics},
+	title = {78K0R/Kx3 Flash Memory Programming},
+	url = {https://www.renesas.com/us/en/document/apn/78k0rkx3-flash-memory-programming-programmer},
+	urldate = {2023-05-16},
+}
+
+@online{REb,
+	author = {Renesas Electronics},
+	title = {78K0R/Kx3 User's Manual: Hardware},
+	url = {https://www.renesas.com/us/en/document/mah/78k0rkx3-users-manual-hardware-r01uh0003ej020078k0rkx3a},
+	urldate = {2023-05-16},
+}
+
+@online{QubeII,
+	author = {Renesas Electronics},
+    title = {QB-MINI2: On-Chip Debug Emulator with Programming},
+    utl = {https://www.renesas.com/eu/en/document/mat/qb-mini2-users-manual},
+	urldate = {2023-05-16},
+}
+
+
+@online{STMa,
+	author ={STMicroelectronics},
+	title = {Discovery kit for STM32F030},
+	url = {https://www.st.com/resource/en/user_manual/um1658-discovery-kit-for-stm32f030-value-line-microcontrollers-stmicroelectronics.pdf},
+	urldate = {2023-05-16},
+}
+
+@online{STMb,
+	author ={STMicroelectronics},
+	title = {RM0360 Reference manual},
+	url = {https://www.st.com/resource/en/reference_manual/dm00091010-stm32f030x4x6x8xc-and-stm32f070x6xb-advanced-armbased-32bit-mcus-stmicroelectronics.pdf},
+	urldate = {2023-05-16},
+}
+
+
+@software{HT21,
+  author       = {Head, Tim and
+                  Kumar, Manoj and
+                  Nahrstaedt, Holger and
+                  Louppe, Gilles and
+                  Shcherbatyi, Iaroslav},
+  title        = {scikit-optimize/scikit-optimize},
+  month        = oct,
+  year         = 2021,
+  publisher    = {Zenodo},
+  version      = {v0.9.0},
+  doi          = {10.5281/zenodo.5565057},
+  url          = {https://doi.org/10.5281/zenodo.5565057}
+}
+
+@Article{HMW+20,
+ title         = {Array programming with {NumPy}},
+ author        = {Charles R. Harris and K. Jarrod Millman and St{\'{e}}fan J.
+                 van der Walt and Ralf Gommers and Pauli Virtanen and David
+                 Cournapeau and Eric Wieser and Julian Taylor and Sebastian
+                 Berg and Nathaniel J. Smith and Robert Kern and Matti Picus
+                 and Stephan Hoyer and Marten H. van Kerkwijk and Matthew
+                 Brett and Allan Haldane and Jaime Fern{\'{a}}ndez del
+                 R{\'{i}}o and Mark Wiebe and Pearu Peterson and Pierre
+                 G{\'{e}}rard-Marchant and Kevin Sheppard and Tyler Reddy and
+                 Warren Weckesser and Hameer Abbasi and Christoph Gohlke and
+                 Travis E. Oliphant},
+ year          = {2020},
+ month         = sep,
+ journal       = {Nature},
+ volume        = {585},
+ number        = {7825},
+ pages         = {357--362},
+ doi           = {10.1038/s41586-020-2649-2},
+ publisher     = {Springer Science and Business Media {LLC}},
+ url           = {https://doi.org/10.1038/s41586-020-2649-2}
+}
+
+@ARTICLE{VPG+20,
+  author  = {Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis E. and
+            Haberland, Matt and Reddy, Tyler and Cournapeau, David and
+            Burovski, Evgeni and Peterson, Pearu and Weckesser, Warren and
+            Bright, Jonathan and {van der Walt}, St{\'e}fan J. and
+            Brett, Matthew and Wilson, Joshua and Millman, K. Jarrod and
+            Mayorov, Nikolay and Nelson, Andrew R. J. and Jones, Eric and
+            Kern, Robert and Larson, Eric and Carey, C J and
+            Polat, {\.I}lhan and Feng, Yu and Moore, Eric W. and
+            {VanderPlas}, Jake and Laxalde, Denis and Perktold, Josef and
+            Cimrman, Robert and Henriksen, Ian and Quintero, E. A. and
+            Harris, Charles R. and Archibald, Anne M. and
+            Ribeiro, Ant{\^o}nio H. and Pedregosa, Fabian and
+            {van Mulbregt}, Paul and {SciPy 1.0 Contributors}},
+  title   = {{{SciPy} 1.0: Fundamental Algorithms for Scientific
+            Computing in Python}},
+  journal = {Nature Methods},
+  year    = {2020},
+  volume  = {17},
+  pages   = {261--272},
+  adsurl  = {https://rdcu.be/b08Wh},
+  doi     = {10.1038/s41592-019-0686-2},
+}
+
+@inproceedings{HHL11,
+author = {Hutter, Frank and Hoos, Holger H. and Leyton-Brown, Kevin},
+title = {Sequential Model-Based Optimization for General Algorithm Configuration},
+year = {2011},
+isbn = {9783642255656},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+url = {https://doi.org/10.1007/978-3-642-25566-3_40},
+doi = {10.1007/978-3-642-25566-3_40},
+abstract = {State-of-the-art algorithms for hard computational problems often expose many parameters that can be modified to improve empirical performance. However, manually exploring the resulting combinatorial space of parameter settings is tedious and tends to lead to unsatisfactory outcomes. Recently, automated approaches for solving this algorithm configuration problem have led to substantial improvements in the state of the art for solving various problems. One promising approach constructs explicit regression models to describe the dependence of target algorithm performance on parameter settings; however, this approach has so far been limited to the optimization of few numerical algorithm parameters on single instances. In this paper, we extend this paradigm for the first time to general algorithm configuration problems, allowing many categorical parameters and optimization for sets of instances. We experimentally validate our new algorithm configuration procedure by optimizing a local search and a tree search solver for the propositional satisfiability problem (SAT), as well as the commercial mixed integer programming (MIP) solver CPLEX. In these experiments, our procedure yielded state-of-the-art performance, and in many cases outperformed the previous best configuration approach.},
+booktitle = {Proceedings of the 5th International Conference on Learning and Intelligent Optimization},
+pages = {507–523},
+numpages = {17},
+location = {Rome, Italy},
+series = {LION'05}
+}
