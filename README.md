@@ -15,6 +15,24 @@ Please note: this is **NOT** an official template by Oregon State University. Un
 * LaTeX issues are a great way to procrastinate; but we want to be productive! 👍 😄
 * Make sure LaTeX best-practices are followed
 
+### 🟠 Status: 
+
+This repository is a *work in progress*. The digital accessibility status of this template is as follows:
+* Ally/UDOIT (Canvas): 100% accessibility
+* VeraPDF (PDF/UA-1): to be updated
+* Acrobat (accessibility): to be updated
+
+Note: the legal requirement is WCAG 2.1 Level AA. The PDF standards PDF/UA-1 (and PDF/UA-2) have varying degrees of overlap with this but do not replace accessibility checking. Acrobat has separate checking tools for accessibility and PDF/UA compliance (this is called Preflight). For PDF/UA compliance, VeraPDF is recommended.
+
+### ✨ Code Style:
+None specifically. It is important to keep the directory structure. Additional notes:
+* Each line of text in your .tex should be a separate line (if using GIT, to help GIT versioning)
+* thesis.pdf should not be committed using GIT regularly (see .gitignore)
+* Only occasionally, commit your pdf using a separate file name; or upload to Box.com
+* Do not use mathmode in any chapter/section/etc.-command (i.e., anything that would show up in the Table of Contents)
+* Remember to pay attention to the accessibility features (alt text, reading order for tables, etc.)
+* When clearing auxiliary files, please make sure to remove also *-luamml-mathml.html
+
 ### Workflow for Including References
 
 * use Zotero and biber exclusively (**not** bibtex)
@@ -56,10 +74,13 @@ Why is a Premium Overleaf account important? Because otherwise, compile time of 
 
 [Sign up to Overleaf](https://www.overleaf.com/edu/oregonstate) using your preferred email as _primary_ email (does not have to be your OSU address). Then, under account preferences/settings, add your onid@ENGR.oregonstate.edu address as _professional_ email. Note the additional ENGR which is probably never needed in any other context.
 
-### Helpful LaTeX Links:
+### Helpful LaTeX Links
 
 * [Find that Symbol](https://detexify.kirelabs.org/classify.html) Website to draw a symbol to get the corresponding LaTeX code (best match)
 * [Slides on ISO80000 Compliant Equations](https://oregonstate.box.com/s/4hk1nea2ku4ponemff6ssj4z37w3krdv) What I created for the EECS Graduate Student Association
 * [Author Guidelines for Preparing Accessible Mathematics Content](https://epubs.siam.org/pb-assets/author_guidelines_accessible_mathematics.pdf)
 * [AMS Guidance for Making Mathematics Accessible Online](https://www.ams.org/accessibility/accessibility-guidance)
 
+### Acknowledgements
+
+Creating this thesis template has been a collaborative effort by multiple people affiliated with Oregon State University: Heidi Schellmann, David A Craig, Ross Hatton, and Vincent Immler.
