@@ -1,0 +1,17 @@
+*.*~
+*.aux
+*.bcf
+*.loa
+*.lof
+*.log
+*.lol
+*.lot
+*.lof
+thesis.pdf
+*.run.xml
+*.synctex.gz
+*.thm
+*.toc
+*.out
+*.xmpdata
+*-luamml-mathml.html
