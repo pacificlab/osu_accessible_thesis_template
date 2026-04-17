@@ -70,26 +70,15 @@
 % \usepackage{libertine}
 % \renewcommand*\oldstylenums[1]{{\fontfamily{fxlj}\selectfont #1}}
 
-
-% % General stuff (continued)
-% \usepackage{ifpdf}
-% \usepackage[normalem]{ulem}
-% %\usepackage[l2tabu, orthodox]{nag} % check code for old/deprecated things (see: l2tabu.pdf)
-% \usepackage{paralist} % improve itemize
-% \usepackage{enumitem}
-% \usepackage{ellipsis} %fix \dots
-
 % \usepackage{xspace} 
 
 % % Figures
-% \usepackage{graphicx}
 % %\usepackage{subfig}
 % \usepackage{placeins}
-% \usepackage[RGB,table]{xcolor} % use option xcdraw ?
 
-% % Tables
+% Tables
 % \usepackage{longtable}
-% \usepackage{booktabs}
+\usepackage{booktabs}
 % \usepackage{multirow}
 
 % % Math stuff and units
@@ -98,7 +87,10 @@
 %\usepackage[intlimits]{amsmath}
 
 %\usepackage{fixmath, upgreek} %provide ISO 80000 conforming greek letters
-%\usepackage{fixmath} %upgreek is only listed as partially compatible
+\usepackage{fixmath} %upgreek is only listed as partially compatible
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 
 %\usepackage[all,warning]{onlyamsmath} %warns if non-amsmath-environments are used, like $$ ... $$ or eqnarray ... acro.sty must be loaded before this package, otherwise strange error happens!
 
@@ -113,6 +105,3 @@
 
 % \usepackage{adjustbox} % not compatible yet
 % \usepackage{afterpage} % not compatible yet
-
-\def\preambleloaded{Precompiled preamble loaded. Ready to go!}
-\usepackage{fixmath, upgreek} %provide iso conform greek letters

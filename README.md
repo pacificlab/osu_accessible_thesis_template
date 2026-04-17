@@ -57,7 +57,10 @@ There are three different directories for figures:
 
 ### Workflow for Creating Algorithms
 
-WARNING: this requires updating and further testing for digital accessibility. The (now likely outdated) recommendation was to use algorithm2e or algpseudocodex and not mix this with other algorithm packages (algorithm, algorithmic, algorithmicx, ...).
+Very briefly tested only:
+* algorithm with algpseudocode appears to work (algpseudocodex uses a too light gray causing color contrast issues)
+* algorithm2e currently does not work
+* Creating a list of algorithms currently does not work
 
 ### Overleaf
 
