@@ -48,7 +48,7 @@ The pedagogical purpose is to illustrate a typical EMFI setup (semi-invasive).
 ### "Favoring Fair Use  (select all that apply)"
 
 - [x] Small quantity used (e.g., single chapter or journal article, other short excerpt)
-- [ ] Portion used is not central to the work as a whole
+- [x] Portion used is not central to the work as a whole
 - [x] Amount used is appropriate to the educational or scholarly purpose
 
 ### "Disfavoring Fair Use (select all that apply)"
@@ -64,7 +64,7 @@ The pedagogical purpose is to illustrate a typical EMFI setup (semi-invasive).
 - [x] No significant effect on the market or potential market for the original
 - [ ] One or few copies made and/or distributed
 - [ ] No longer in print; absence of licensing mechanism
-- [x] Restricted access (limited to students in a class, working group, committee, etc.)
+- [ ] Restricted access (limited to students in a class, working group, committee, etc.)
 - [ ] One-time use
 
 ### "Disfavoring Fair Use (select all that apply)"
