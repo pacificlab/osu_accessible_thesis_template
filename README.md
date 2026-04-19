@@ -11,7 +11,7 @@ Please note: this is **NOT** an official template by Oregon State University. Un
 
 * Make sure LaTeX can be used in the future
 * The old template provided by OSU has/had compatibility issues: [EECS template](https://engineering.oregonstate.edu/EECS/myeecs/current-graduate-students/forms) (note, this link might stop working after April 24, 2026)
-* Ensure compatibility with the [previous requirements](https://web.archive.org/web/20220218044531/https://gradschool.oregonstate.edu/sites/gradschool.oregonstate.edu/files/2021-08/thesisguide2022-v2.pdf) of the Graduate School. Note that the [new requirements](https://graduate.oregonstate.edu/current-students/thesis-guide/formatting-thesis-or-dissertation) are largely the same but now include 'dubious' requirements such as: "All headings, regardless of level, must be the same font size" that are missing the needs of the majority of readers while not improving digital accessibility for which proper tagging is needed
+* Ensure compatibility with the [previous requirements](https://web.archive.org/web/20220218044531/https://gradschool.oregonstate.edu/sites/gradschool.oregonstate.edu/files/2021-08/thesisguide2022-v2.pdf) of the Graduate School. Note that the [new requirements](https://graduate.oregonstate.edu/current-students/thesis-guide/formatting-thesis-or-dissertation) are largely the same but now include 'dubious' requirements such as: "All headings, regardless of level, must be the same font size" that are not aligned with the needs of the majority of readers while also not improving digital accessibility for which proper tagging is needed (independent of font size)
 * LaTeX issues are a great way to procrastinate; but we want to be productive! 👍 😄
 * Make sure LaTeX best-practices are followed
 
