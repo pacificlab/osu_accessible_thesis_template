@@ -44,7 +44,7 @@ None specifically. It is important to keep the directory structure. Additional n
 ### Workflow for Creating Tables
 
 * Be lazy, be smart, and use a generator for creating tables
-* [Option 1](https://www.tablesgenerator.com/latex_tables) This online tables generator can also import from .csv 
+* [Option 1:](https://www.tablesgenerator.com/latex_tables) This online tables generator can also import from .csv 
 * Option 2: LyX (view code, copy into your document)
 * Follow proper typesetting guidelines: use booktabs style for your table
 
