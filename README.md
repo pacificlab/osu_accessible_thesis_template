@@ -1,10 +1,10 @@
 # osu_accessible_thesis_template
 
-Repository with instructions and reference template for writing a thesis at Oregon State University. This template is designed for digital accessibility and based on the original beavtex.cls that was used at the School of Electrical Engineering and Computer Science (EECS). Includes general guidance and tips for typesetting LaTeX stuff.
+Repository with instructions and reference template for writing a thesis at Oregon State University. This template is designed for digital accessibility and based on the original beavtex.cls that was used at the School of Electrical Engineering and Computer Science (EECS).
 
 Please note: this is **NOT** an official template by Oregon State University. Unfortunately, there is [quite a bit of misleading information out there](https://accessibility.oregonstate.edu/digital-accessibility/resource-page/pdf-decision-tree-instructional-materials) on the accessibility of PDFs. For LaTeX, you should check the following resources:
-* [LaTeX Tagging Project: Usage Instructions](https://latex3.github.io/tagging-project/documentation/usage-instructions) Instructions on how to ensure accessible PDFs when using LaTeX.
-* [LaTeX Tagging Project: Tagging Status of LaTeX Packages](https://latex3.github.io/tagging-project/tagging-status/) Check if your package is marked as compatible with tagging (this is an ongoing process of the LaTeX community)
+* [LaTeX Tagging Project: Usage Instructions](https://latex3.github.io/tagging-project/documentation/usage-instructions) how to ensure accessible PDFs when using LaTeX.
+* [LaTeX Tagging Project: Tagging Status of LaTeX Packages](https://latex3.github.io/tagging-project/tagging-status/) to check if your package is marked as compatible with tagging (this is an ongoing development)
 
 ## ⭐ About:
 ### Motivation:
@@ -19,7 +19,7 @@ Please note: this is **NOT** an official template by Oregon State University. Un
 
 This repository is a *work in progress*. The digital accessibility status of this template is as follows:
 * Ally/UDOIT (Canvas): 100% accessibility
-* VeraPDF (PDF/UA-1): to be updated
+* [VeraPDF (PDF/UA-1)](https://dev.verapdf-rest.duallab.com/): to be updated
 * Acrobat (accessibility): to be updated
 
 Note: the legal requirement is WCAG 2.1 Level AA. The PDF standards PDF/UA-1 (and PDF/UA-2) have varying degrees of overlap with this but do not replace accessibility checking. Acrobat has separate checking tools for accessibility and PDF/UA compliance (this is called Preflight). For PDF/UA compliance, VeraPDF is recommended.
@@ -37,9 +37,9 @@ None specifically. It is important to keep the directory structure. Additional n
 
 * use Zotero and biber exclusively (**not** bibtex)
 
-**IMPORTANT 1**: this thesis template requires biber for creating the bibliography. For historical reasons, bibtex is set as the default in TexStudio (and possibly other IDEs). Please double-check how your IDE is configured!
+*IMPORTANT 1*: this thesis template requires biber for creating the bibliography. For historical reasons, bibtex is set as the default in TexStudio (and possibly other IDEs). Please double-check how your IDE is configured!
 
-**IMPORTANT 2**: when using Zotero to export references, select "Format: Better BibLaTeX" (*NOT* Better BibTeX)
+*IMPORTANT 2*: when using Zotero to export references, select "Format: Better BibLaTeX" (*NOT* Better BibTeX)
 
 ### Workflow for Creating Tables
 
@@ -64,11 +64,11 @@ Very briefly tested only:
 
 ### Overleaf
 
-**IMPORTANT**: should you use this on Overleaf, name your thesis project and .tex file as follows:
+*IMPORTANT*: should you use this on Overleaf, name your Overleaf project and .tex file as follows:
 * type_thesis_firstname_lastname
 * type = {hc, ms, phd, other}
 * for example: ms_thesis_benny_beaver
-* this is especially important when sharing your Overleaf project with me
+* this is especially important when sharing your Overleaf project with your advisor
 * _do not_ name your thesis "mythesis" or other non-identifying descriptions
 
 **Note: ENGR students get a free Premium Overleaf account through OSU!**
