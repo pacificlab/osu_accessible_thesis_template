@@ -11,7 +11,7 @@ Please note: this is **NOT** an official template by Oregon State University. Un
 
 * Make sure LaTeX can be used in the future
 * The old template provided by OSU has/had compatibility issues: [EECS template](https://engineering.oregonstate.edu/EECS/myeecs/current-graduate-students/forms) (note, this link might stop working after April 24, 2026)
-* Ensure compatibility with the current/previous requirements outlined here: [Graduate School Requirements](https://gradschool.oregonstate.edu/sites/gradschool.oregonstate.edu/files/2021-08/thesisguide2022-v2.pdf) (note, this link might stop working after April 24, 2026)
+* Ensure compatibility with the current/previous requirements outlined here: [Graduate School Requirements](https://graduate.oregonstate.edu/current-students/thesis-guide/formatting-thesis-or-dissertation)
 * LaTeX issues are a great way to procrastinate; but we want to be productive! 👍 😄
 * Make sure LaTeX best-practices are followed
 
