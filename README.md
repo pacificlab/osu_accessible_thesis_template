@@ -51,8 +51,8 @@ None specifically. It is important to keep the directory structure. Additional n
 ### Workflow for Creating Figures/Plots
 
 There are three different directories for figures:
-* figures_external: for external figures not created by you; you are strongly encouraged to make a fair use determination to ensure you are permitted using this figure
-* figures_internal: any figure you might have that was created outside of LaTeX or without a Makefile
+* figures_external: for external figures not created by you; you are strongly encouraged to make a fair use determination to ensure you are permitted using this figure. A Markdown template is provided as an example to guide this process.
+* figures_internal: any figure created by you but outside of LaTeX or without a Makefile
 * figures: what I (Vincent) use in combination with a Makefile to externalize the process of building plots, figures, etc. (matplotlib, gnuplot, pgfplots, IPE, etc.)
 
 ### Workflow for Creating Algorithms
