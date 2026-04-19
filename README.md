@@ -6,6 +6,8 @@ Please note: this is **NOT** an official template by Oregon State University. Un
 * [LaTeX Tagging Project: Usage Instructions](https://latex3.github.io/tagging-project/documentation/usage-instructions) how to ensure accessible PDFs when using LaTeX
 * [LaTeX Tagging Project: Tagging Status of LaTeX Packages](https://latex3.github.io/tagging-project/tagging-status/) to check if your package is marked as compatible with tagging (this is an ongoing development)
 
+**Technical requirements:** this template is designed to work with LuaLaTeX 2025-11-01 or newer (or simply: TeXLive 2026). This is needed for proper tagging support. In the future, pdflatex will only receive maintenance updates.
+
 ## ⭐ About:
 ### Motivation:
 
