@@ -3,7 +3,7 @@
 Repository with instructions and reference template for writing a thesis at Oregon State University. This template is designed for digital accessibility and based on the original beavtex.cls that was used at the School of Electrical Engineering and Computer Science (EECS).
 
 Please note: this is **NOT** an official template by Oregon State University. Unfortunately, there is [quite a bit of misleading information out there](https://accessibility.oregonstate.edu/digital-accessibility/resource-page/pdf-decision-tree-instructional-materials) on the accessibility of PDFs. For LaTeX, you should check the following resources:
-* [LaTeX Tagging Project: Usage Instructions](https://latex3.github.io/tagging-project/documentation/usage-instructions) how to ensure accessible PDFs when using LaTeX.
+* [LaTeX Tagging Project: Usage Instructions](https://latex3.github.io/tagging-project/documentation/usage-instructions) how to ensure accessible PDFs when using LaTeX
 * [LaTeX Tagging Project: Tagging Status of LaTeX Packages](https://latex3.github.io/tagging-project/tagging-status/) to check if your package is marked as compatible with tagging (this is an ongoing development)
 
 ## ⭐ About:
