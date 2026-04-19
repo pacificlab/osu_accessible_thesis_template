@@ -19,10 +19,10 @@ Please note: this is **NOT** an official template by Oregon State University. Un
 
 This repository is a *work in progress*. The digital accessibility status of this template is as follows:
 * Ally/UDOIT (Canvas): 100% accessibility
-* [VeraPDF (PDF/UA-1)](https://dev.verapdf-rest.duallab.com/): to be updated
+* [VeraPDF (PDF/UA-1)](https://dev.verapdf-rest.duallab.com/): passes
 * Acrobat (accessibility): to be updated
 
-Note: the legal requirement is WCAG 2.1 Level AA. The PDF standards PDF/UA-1 (and PDF/UA-2) have varying degrees of overlap with this but do not replace accessibility checking. Acrobat has separate checking tools for accessibility and PDF/UA compliance (this is called Preflight). For PDF/UA compliance, VeraPDF is recommended.
+Note: the legal requirement is WCAG 2.1 Level AA. The PDF standards PDF/UA-1 (and PDF/UA-2) have varying degrees of overlap with this but do not replace accessibility checking. Acrobat has separate checking tools for accessibility and PDF/UA compliance (this is called Preflight). For PDF/UA compliance, VeraPDF is recommended. The combination of accessibility features with PDF/UA-1 should provide "substantially equivalent or greater accessibility" compared to what is legally required. PDF/UA-2 is newer than the legislation on digital accessibility.
 
 ### ✨ Code Style:
 None specifically. It is important to keep the directory structure. Additional notes:
