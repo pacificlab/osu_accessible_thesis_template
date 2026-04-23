@@ -15,6 +15,7 @@
     \ifuatwo
         \typeout{USING PDF 2.0/ua-2}
         \DocumentMetadata{
+            %check-tagging-status,
             uncompress,
             lang=en-US,
             pdfversion=2.0,
@@ -26,6 +27,7 @@
           \else
           \typeout{USING PDF 1.7}
           \DocumentMetadata{
+            %check-tagging-status,
             uncompress,
             lang=en-US,
             pdfversion=1.7,
@@ -38,20 +40,10 @@
     \typeout{NOT USING TAGPDF}
 \fi
 
-
-%\RequirePackage{fix-cm} % overrides the (original) LaTeX restrictions on the sizes at which CM and EC fonts may be used
-\RequirePackage{cmap} % make PDF files searchable and copyable.
-\RequirePackage{mmap} % include CMap resources in PDF files from PDFTeX. cmap + mathematics (ASCII)
-
-
 \listfiles
 
 \documentclass[onehalf,11pt]{beavtex}
 %\documentclass[onehalf,11pt]{book}
-
-% [pdflatex]
-% \usepackage[utf8]{inputenc}
-% \usepackage[T1]{fontenc}
 
 \usepackage{fontspec}
 \setmainfont{Libertinus Serif}
@@ -62,15 +54,6 @@
 \setmathfont[Scale=MatchUppercase]{libertinusmath-regular.otf}
 
 \usepackage[final,babel]{microtype}
-
-% [pdflatex]
-% %\usepackage[default,osf]{sourcesanspro}
-% %\usepackage[scaled=.95]{sourcecodepro}
-% \usepackage{sourcecodepro}
-% \usepackage{libertine}
-% \renewcommand*\oldstylenums[1]{{\fontfamily{fxlj}\selectfont #1}}
-
-% \usepackage{xspace} 
 
 % % Figures
 % %\usepackage{subfig}
@@ -84,7 +67,6 @@
 % % Math stuff and units
 % \usepackage{textcomp,marvosym}
 \usepackage{latexsym, amsfonts}  %HMS reenable
-%\usepackage[intlimits]{amsmath}
 
 %\usepackage{fixmath, upgreek} %provide ISO 80000 conforming greek letters
 \usepackage{fixmath} %upgreek is only listed as partially compatible
