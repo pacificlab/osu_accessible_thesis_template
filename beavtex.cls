@@ -486,7 +486,7 @@
 \renewcommand{\maketitle}{\if\@nopretext \else\pretext\fi}
 
 % T.G. : A flyleaf is needed at the end of the thesis.
-\AtEndDocument{\clearpage \flyleaf}
+%\AtEndDocument{\clearpage \flyleaf}
 
 % Chapter heading. T.G. : all title must be the same size (14 or normal).
 \renewcommand{\@makechapterhead}[1]{%
